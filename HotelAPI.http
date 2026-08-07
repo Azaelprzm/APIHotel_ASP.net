@@ -1,0 +1,31 @@
+@HotelAPI_HostAddress = http://localhost:5044
+@Token = reemplaza-con-el-token-de-login
+
+### Registrar el primer administrador (solo con la tabla Usuarios vacía)
+POST {{HotelAPI_HostAddress}}/api/auth/register
+Content-Type: application/json
+
+{
+  "nombre": "Administrador",
+  "email": "admin@hotel.local",
+  "password": "cambia-esta-clave",
+  "rol": "Administrador"
+}
+
+### Iniciar sesión
+POST {{HotelAPI_HostAddress}}/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "admin@hotel.local",
+  "password": "cambia-esta-clave"
+}
+
+### Consultar habitaciones (público)
+GET {{HotelAPI_HostAddress}}/api/habitaciones
+Accept: application/json
+
+### Consultar reservas (requiere autenticación)
+GET {{HotelAPI_HostAddress}}/api/reservas
+Authorization: Bearer {{Token}}
+Accept: application/json
