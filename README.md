@@ -1,6 +1,6 @@
 # Hotel API
 
-API REST para administrar clientes, habitaciones, reservas y pagos de un hotel. El proyecto fue desarrollado con ASP.NET Core y conserva su propósito académico original, con una estructura y configuración preparadas para ejecutarse de forma reproducible y segura.
+API REST para administrar clientes, habitaciones, reservas y pagos de un hotel. El proyecto fue desarrollado con ASP.NET Core.
 
 ## Funcionalidades
 
